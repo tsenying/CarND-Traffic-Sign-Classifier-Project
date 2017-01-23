@@ -15699,9 +15699,9 @@ Also, if it is not shuffled before training, the batched data will be very unifo
 labels_counts=[ 210 2220 2250 1410 1980 1860  420 1440 1410 1470 2010 1320 2100 2160  780
   630  420 1110 1200  210  360  330  390  510  270 1500  600  240  540  270
   450  780  240  689  420 1200  390  210 2070  300  360  240  240]
-labels_indices=[370  16   7  59  13  70  11  75  14  19   4   0  33   1   5 101 179  57
-  48 108 116   6 172 173  50  45 196  38   8  27  71  34  77  95  78 123
-  42  10  12 102  93 685  20]
+labels_indices=[211   4  13   1  59  18  19  23  53  24  37  16  43   2  21  11  30  14
+  50  61 337 114  48  10   0  31  57   3  63  56  42 212 190  25 274   7
+  89 522   9 155   8 148 314]
 </pre>
 </div>
 </div>
@@ -15979,7 +15979,7 @@ Starting out with archictecture from LeNet Lab.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># train model</span>
@@ -16023,34 +16023,34 @@ Starting out with archictecture from LeNet Lab.</p>
 <pre>Training...
 
 EPOCH 1 ...
-Validation Accuracy = 0.638
+Validation Accuracy = 0.811
 
 EPOCH 2 ...
-Validation Accuracy = 0.813
+Validation Accuracy = 0.894
 
 EPOCH 3 ...
-Validation Accuracy = 0.872
+Validation Accuracy = 0.927
 
 EPOCH 4 ...
-Validation Accuracy = 0.913
+Validation Accuracy = 0.945
 
 EPOCH 5 ...
-Validation Accuracy = 0.923
+Validation Accuracy = 0.957
 
 EPOCH 6 ...
-Validation Accuracy = 0.918
+Validation Accuracy = 0.960
 
 EPOCH 7 ...
-Validation Accuracy = 0.938
+Validation Accuracy = 0.957
 
 EPOCH 8 ...
-Validation Accuracy = 0.947
+Validation Accuracy = 0.958
 
 EPOCH 9 ...
-Validation Accuracy = 0.951
+Validation Accuracy = 0.964
 
 EPOCH 10 ...
-Validation Accuracy = 0.950
+Validation Accuracy = 0.946
 
 Model saved
 </pre>
@@ -16063,7 +16063,7 @@ Model saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#evaluate model</span>
@@ -16084,7 +16084,7 @@ Model saved
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Test Accuracy = 0.870
+<pre>Test Accuracy = 0.860
 </pre>
 </div>
 </div>
@@ -16176,7 +16176,7 @@ The next iteration would attempt the architecture outlined in the reference pape
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Load the images and plot them here.</span>
@@ -16190,7 +16190,7 @@ The next iteration would attempt the architecture outlined in the reference pape
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># JPEG images are 3 channel RGB images consistent with input data, so are easiest to deal with,</span>
@@ -16696,7 +16696,7 @@ dZe8CQAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># prep images data into 4D shape (-1,32,32,3) to match model</span>
@@ -16761,7 +16761,7 @@ e.g. the speed limit signs look that same except for a single digit inside a cir
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
@@ -16789,64 +16789,64 @@ e.g. the speed limit signs look that same except for a single digit inside a cir
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>softmax probabilities=[[  8.71334356e-18   1.77276271e-12   1.14311384e-15   1.08603007e-14
-    6.75087482e-13   7.65380750e-15   1.21012429e-18   6.45334413e-15
-    2.55128362e-16   3.76346496e-14   1.04256251e-13   2.58255872e-16
-    5.46346458e-15   1.68793216e-10   9.99894381e-01   3.11529752e-12
-    7.89203113e-24   1.05556719e-04   4.76059198e-16   2.86059502e-24
-    2.28150018e-13   5.10702168e-15   1.82978389e-11   5.21655947e-14
-    4.24333625e-19   5.02373056e-12   4.20587195e-17   8.68453616e-19
-    8.08866898e-20   2.23083206e-12   1.34146510e-17   1.07868070e-14
-    2.90702819e-13   4.31390153e-15   4.76435022e-17   2.15048708e-16
-    2.54588343e-12   5.66564022e-19   2.94329592e-15   8.51207935e-19
-    2.00756787e-14   5.71249186e-20   9.65812907e-16]
- [  9.06034933e-16   9.99997258e-01   2.34072530e-08   2.63092457e-16
-    1.32850756e-20   2.77545541e-06   1.29365300e-23   6.69372106e-15
-    1.28610076e-22   2.30363318e-33   2.17564168e-34   5.99098926e-17
-    9.73922742e-31   2.94969472e-35   0.00000000e+00   7.58626631e-34
-    6.09974965e-30   0.00000000e+00   3.92699495e-24   1.22635014e-36
-    3.62193898e-26   4.54280201e-21   0.00000000e+00   4.29378258e-33
-    1.27230477e-31   6.04156643e-26   8.49954108e-37   3.62445811e-24
-    1.33475832e-31   0.00000000e+00   0.00000000e+00   1.14907971e-18
-    1.25835821e-34   0.00000000e+00   0.00000000e+00   0.00000000e+00
-    0.00000000e+00   8.35135128e-28   0.00000000e+00   0.00000000e+00
-    1.31933442e-30   0.00000000e+00   9.12549685e-37]
- [  7.95736088e-10   1.32776404e-05   1.08286535e-12   4.30527308e-23
-    7.89874624e-11   1.06625396e-12   7.77802413e-22   2.15776885e-09
-    9.99986768e-01   1.91750011e-22   2.34894861e-30   1.59688263e-16
-    9.34891745e-14   1.36599060e-23   1.64184589e-15   2.88504885e-15
-    5.64801455e-19   2.01654011e-31   1.94129533e-14   3.69357128e-36
-    2.96091497e-20   7.17725142e-27   0.00000000e+00   6.82017426e-24
-    6.07482485e-27   5.79474213e-14   8.98624175e-10   9.90709360e-19
-    9.92232284e-14   4.42141074e-17   5.69205939e-24   1.20157962e-24
-    1.00201774e-16   5.48838736e-31   3.72374070e-32   1.59194879e-25
-    1.56910471e-17   2.08308567e-23   3.28075382e-17   2.91131695e-30
-    1.54664892e-15   2.52273233e-19   4.67553875e-24]
+<pre>softmax probabilities=[[  0.00000000e+00   2.68477828e-38   1.59370000e-27   1.47132461e-35
+    3.82377792e-32   1.06672210e-30   0.00000000e+00   8.04393511e-31
+    2.53943455e-31   0.00000000e+00   0.00000000e+00   0.00000000e+00
+    0.00000000e+00   8.28708242e-27   1.00000000e+00   5.59564126e-24
+    0.00000000e+00   0.00000000e+00   2.10091477e-33   0.00000000e+00
+    4.11841161e-35   0.00000000e+00   0.00000000e+00   0.00000000e+00
+    0.00000000e+00   2.74473629e-31   0.00000000e+00   0.00000000e+00
+    0.00000000e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00
+    0.00000000e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00
+    0.00000000e+00   0.00000000e+00   6.68825980e-35   0.00000000e+00
+    0.00000000e+00   0.00000000e+00   0.00000000e+00]
+ [  4.59827619e-12   7.65721268e-07   8.84148305e-14   4.30286842e-14
+    6.16194740e-08   9.99995589e-01   7.54664503e-36   3.60672743e-06
+    6.64273107e-12   1.03401275e-29   1.14736389e-20   5.29555485e-26
+    5.00126695e-37   1.95782816e-31   4.48721328e-37   1.35445646e-32
+    3.97447198e-26   0.00000000e+00   8.72186046e-10   1.02349214e-28
+    2.56862368e-30   4.29763077e-16   0.00000000e+00   1.62570443e-32
+    8.41258366e-17   8.92775001e-19   5.88065976e-26   8.57772323e-24
+    1.26115256e-27   1.05379279e-27   9.69109459e-26   9.79591122e-18
+    1.47177506e-32   1.44276744e-34   7.60426536e-29   2.83081135e-33
+    5.54860537e-29   7.02466626e-23   2.39911355e-36   0.00000000e+00
+    1.08046886e-24   8.08244650e-37   8.64315511e-31]
+ [  1.00000000e+00   1.04802863e-12   5.44372943e-25   1.26436215e-26
+    3.34548908e-19   9.93366166e-22   1.79297551e-32   3.33763338e-21
+    4.07693270e-17   0.00000000e+00   0.00000000e+00   3.35917054e-35
+    0.00000000e+00   8.24901985e-33   1.81643173e-38   2.04143671e-37
+    0.00000000e+00   1.35676478e-38   3.06371004e-27   2.65608344e-37
+    6.70086699e-30   1.25272080e-32   0.00000000e+00   0.00000000e+00
+    3.21255788e-32   7.34161425e-34   0.00000000e+00   3.88520866e-32
+    3.45343779e-34   3.48404550e-33   0.00000000e+00   7.89943143e-24
+    4.24409837e-31   0.00000000e+00   1.70016432e-35   2.85994719e-32
+    3.62444949e-34   0.00000000e+00   3.72805125e-26   0.00000000e+00
+    3.57396751e-33   0.00000000e+00   0.00000000e+00]
  [  0.00000000e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00
     0.00000000e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00
-    0.00000000e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00
-    0.00000000e+00   1.53670841e-28   0.00000000e+00   0.00000000e+00
-    0.00000000e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00
-    0.00000000e+00   0.00000000e+00   0.00000000e+00   2.11523596e-34
+    2.70143260e-37   0.00000000e+00   0.00000000e+00   0.00000000e+00
     0.00000000e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00
     0.00000000e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00
-    0.00000000e+00   0.00000000e+00   9.45684626e-29   0.00000000e+00
-    5.61481397e-34   0.00000000e+00   1.00000000e+00   0.00000000e+00
-    0.00000000e+00   3.59215070e-38   0.00000000e+00]
- [  1.01048430e-14   8.13187406e-10   1.02594604e-12   8.14908532e-08
-    5.89156870e-13   1.90585075e-10   5.95694174e-15   2.57341393e-09
-    7.47360437e-11   2.62412634e-08   7.06163874e-08   3.26274119e-07
-    2.20106315e-07   1.76224625e-11   9.65620160e-01   6.57842704e-13
-    2.75792996e-15   3.95807501e-06   1.94245018e-03   1.31115171e-12
-    3.85069740e-07   1.44356281e-05   4.49775456e-07   2.83242321e-06
-    6.44885212e-09   2.48704292e-02   6.73583895e-03   1.89474259e-09
-    2.14026075e-10   2.89707968e-04   2.89533926e-08   5.18365006e-04
-    3.29915159e-13   5.40741618e-10   8.11172590e-16   4.98033385e-12
-    2.49713253e-07   1.86500343e-10   6.19928692e-11   8.67686534e-10
-    6.70463578e-08   1.37415321e-13   4.07154952e-12]]
-predicted labels=[14  1  8 38 14]
-[ 0.99999994  1.          1.          1.          1.00000012]
-correct labels=[ True False  True  True False]
+    2.00980194e-30   0.00000000e+00   0.00000000e+00   0.00000000e+00
+    0.00000000e+00   3.45998956e-35   0.00000000e+00   0.00000000e+00
+    0.00000000e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00
+    0.00000000e+00   0.00000000e+00   2.42327358e-17   0.00000000e+00
+    1.02221035e-33   0.00000000e+00   1.00000000e+00   0.00000000e+00
+    1.35675405e-31   0.00000000e+00   0.00000000e+00]
+ [  5.62333924e-20   1.33308236e-08   1.19329062e-16   7.47382850e-11
+    1.68101053e-19   5.96445704e-14   2.68892450e-18   2.80304461e-18
+    7.88658012e-14   8.05891052e-18   1.88483504e-18   6.82389843e-18
+    9.66529510e-17   6.21495110e-06   1.72531873e-05   5.22078253e-17
+    2.57125160e-22   2.15257608e-16   1.53051012e-08   1.12490927e-29
+    5.38956622e-11   2.66371910e-17   5.06505740e-11   1.96735760e-17
+    5.89652093e-14   9.99976516e-01   2.58912544e-11   1.21922467e-22
+    1.05413343e-14   2.41733716e-12   2.49338653e-16   2.00820580e-16
+    1.18874552e-19   7.79506123e-20   7.89445609e-24   2.14975565e-10
+    1.64474242e-13   2.52670521e-25   2.68024412e-15   3.12480500e-25
+    1.10876538e-13   1.29523811e-12   8.76476761e-14]]
+predicted labels=[14  5  0 38 25]
+[ 1.  1.  1.  1.  1.]
+correct labels=[ True False False  True  True]
 </pre>
 </div>
 </div>
@@ -16871,15 +16871,16 @@ correct labels=[ True False  True  True False]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Answer:"><strong>Answer:</strong><a class="anchor-link" href="#Answer:">&#182;</a></h3><p>Model predicted 4 out of 5 correctly.
-The failure was the 120km/h sign which was predicted as the 30km/h, this is understandable as they are visually similar.</p>
+<h3 id="Answer:"><strong>Answer:</strong><a class="anchor-link" href="#Answer:">&#182;</a></h3><p>Model predicted 3 out of 5 correctly.
+Speed limit signs didn't fare well as they are visually similar.
+The failures include the 50km/h mis-classed as 80km/h and the 120km/h sign which was predicted as the 20km/h.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Visualize the softmax probabilities here.</span>
@@ -16899,25 +16900,25 @@ The failure was the 120km/h sign which was predicted as the 30km/h, this is unde
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>top_3=TopKV2(values=array([[  9.99894381e-01,   1.05556719e-04,   1.68793216e-10],
-       [  9.99997258e-01,   2.77545541e-06,   2.34072530e-08],
-       [  9.99986768e-01,   1.32776404e-05,   2.15776885e-09],
-       [  1.00000000e+00,   1.53670841e-28,   9.45684626e-29],
-       [  9.65620160e-01,   2.48704292e-02,   6.73583895e-03]], dtype=float32), indices=array([[14, 17, 13],
-       [ 1,  5,  2],
-       [ 8,  1,  7],
-       [38, 13, 34],
-       [14, 25, 26]], dtype=int32))
-top_3.values=[[  9.99894381e-01   1.05556719e-04   1.68793216e-10]
- [  9.99997258e-01   2.77545541e-06   2.34072530e-08]
- [  9.99986768e-01   1.32776404e-05   2.15776885e-09]
- [  1.00000000e+00   1.53670841e-28   9.45684626e-29]
- [  9.65620160e-01   2.48704292e-02   6.73583895e-03]]
-top_3.indices=[[14 17 13]
- [ 1  5  2]
- [ 8  1  7]
- [38 13 34]
- [14 25 26]]
+<pre>top_3=TopKV2(values=array([[  1.00000000e+00,   5.59564126e-24,   8.28708242e-27],
+       [  9.99995589e-01,   3.60672743e-06,   7.65721268e-07],
+       [  1.00000000e+00,   1.04802863e-12,   4.07693270e-17],
+       [  1.00000000e+00,   2.42327358e-17,   2.00980194e-30],
+       [  9.99976516e-01,   1.72531873e-05,   6.21495110e-06]], dtype=float32), indices=array([[14, 15, 13],
+       [ 5,  7,  1],
+       [ 0,  1,  8],
+       [38, 34, 20],
+       [25, 14, 13]], dtype=int32))
+top_3.values=[[  1.00000000e+00   5.59564126e-24   8.28708242e-27]
+ [  9.99995589e-01   3.60672743e-06   7.65721268e-07]
+ [  1.00000000e+00   1.04802863e-12   4.07693270e-17]
+ [  1.00000000e+00   2.42327358e-17   2.00980194e-30]
+ [  9.99976516e-01   1.72531873e-05   6.21495110e-06]]
+top_3.indices=[[14 15 13]
+ [ 5  7  1]
+ [ 0  1  8]
+ [38 34 20]
+ [25 14 13]]
 </pre>
 </div>
 </div>
@@ -16968,9 +16969,8 @@ a = np.array([[ 0.24879643,  0.07032244,  0.12641572,  0.34763842,  0.07893497,
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong>
-The model is certain of the first 4 images,
-however, the third image is classified incorrectly, probably because it is so similar to other speed limit signs.
-The model is less certain of the 5th (road work) sign, with only slightly over 0.5 probability. Perhaps because there are much fewer triangular warning signs in dataset to train on.</p>
+The model has high certainties for it's top choices despite it's mis-classifications.
+The top choice all had probabilities &gt; 9.9</p>
 
 </div>
 </div>
