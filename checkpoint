@@ -1,0 +1,2 @@
+model_checkpoint_path: "lenet_3channel"
+all_model_checkpoint_paths: "lenet_3channel"
